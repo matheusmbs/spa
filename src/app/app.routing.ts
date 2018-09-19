@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/authentication/auth-layout.component';
+import { AnalystLayoutComponent } from './layouts/analyst/analyst-layout.component';
 
 export const AppRoutes: Routes = [
   {
@@ -59,7 +60,15 @@ export const AppRoutes: Routes = [
     path: 'docs',
     loadChildren: './docs/docs.module#DocsModule'
   }]
-},{
+},
+{
+  path: '',
+  component: AnalystLayoutComponent,
+  children: [{
+    path: 'analyst',
+    loadChildren: './layouts/analyst/analyst.module#AnalystModule'
+  }]
+}, {
   path: '',
   component: AuthLayoutComponent,
   children: [{
