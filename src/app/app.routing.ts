@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
-import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
+import { AuthLayoutComponent } from './layouts/authentication/auth-layout.component';
 
-export const AppRoutes: Routes = [{
+export const AppRoutes: Routes = [
+  {
   path: '',
   component: AdminLayoutComponent,
   children: [{
@@ -58,20 +59,14 @@ export const AppRoutes: Routes = [{
     path: 'docs',
     loadChildren: './docs/docs.module#DocsModule'
   }]
-}, {
+},{
   path: '',
   component: AuthLayoutComponent,
   children: [{
     path: 'authentication',
-    loadChildren: './authentication/authentication.module#AuthenticationModule'
-  }, {
-    path: 'error',
-    loadChildren: './error/error.module#ErrorModule'
-  }, {
-    path: 'landing',
-    loadChildren: './landing/landing.module#LandingModule'
+    loadChildren: './layouts/authentication/authentication.module#AuthenticationModule'
   }]
-}, {
+},  {
   path: '**',
   redirectTo: 'error/404'
 }];

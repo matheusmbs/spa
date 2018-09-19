@@ -14,7 +14,7 @@ import { AgmCoreModule } from '@agm/core';
 import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
-import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
+import { AuthLayoutComponent } from './layouts/authentication/auth-layout.component';
 import { SharedModule } from './shared/shared.module';
 
 export function createTranslateLoader(http: HttpClient) {
