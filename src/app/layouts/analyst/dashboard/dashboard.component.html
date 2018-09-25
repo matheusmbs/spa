@@ -1,58 +1,490 @@
 <div class="row">
-    <div class="col-sm-6 col-md-3">
-      <div class="card card-body card-widget">
-        <div class="widget-icon rounded-circle bg-blue text-white icon icon-basic-sheet">
-        </div>
-        <div class="block ml-3 mr-3">
-          <h5 class="mb-0 fw-400">
-            50
-          </h5>
-          <small class="text-muted text-uppercase ">
-            <strong>Quantidade de Demandas</strong>
-          </small>
-        </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="card card-body card-widget bg-blue card-inverse">
+      <div class="widget-bg-icon icon icon-basic-sheet"></div>
+      <div class="block">
+        <h5 class="mb-0">
+          <strong>50</strong>
+        </h5>
+        <p>Quantidade de demandas</p>
       </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="card card-body card-widget">
-        <div class="widget-icon rounded-circle bg-green text-white icon icon-arrows-check">
-        </div>
-        <div class="block ml-3 mr-3">
-          <h5 class="mb-0 fw-400">
-            30
-          </h5>
-          <small class="text-muted text-uppercase ">
-            <strong>Demandas Concluidas</strong>
-          </small>
-        </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="card card-body card-widget bg-green card-inverse">
+      <div class="widget-bg-icon icon icon-arrows-check"></div>
+      <div class="block">
+        <h5 class="mb-0">
+          <strong>30</strong>
+        </h5>
+        <p>Demandas Concluidas</p>
       </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="card card-body card-widget">
-        <div class="widget-icon rounded-circle bg-teal text-white icon icon-basic-clock">
-        </div>
-        <div class="block ml-3 mr-3">
-          <h5 class="mb-0 fw-400">
-            10
-          </h5>
-          <small class="text-muted text-uppercase ">
-            <strong>Demandas em andamento</strong>
-          </small>
-        </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="card card-body card-widget bg-cyan card-inverse">
+      <div class="widget-bg-icon icon icon-basic-clock"></div>
+      <div class="block">
+        <h5 class="mb-0">
+          <strong>10</strong>
+        </h5>
+        <p>Demandas em andamentos</p>
       </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="card card-body card-widget">
-        <div class="widget-icon rounded-circle bg-red text-white icon icon-basic-clockwise">
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="card card-body card-widget bg-purple card-inverse">
+      <div class="widget-bg-icon icon icon-basic-clockwise"></div>
+      <div class="block">
+        <h5 class="mb-0">
+          <strong>10</strong>
+        </h5>
+        <p>Demandas não iniciadas</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="form-group">
+      <form>
+        <span for="buscar">Buscar:</span>
+        <input id="buscar" class="form-control bg-white" placeholder='Digite a demanda' name="buscar" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="row issue">
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 1</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
         </div>
-        <div class="block ml-3 mr-3">
-          <h5 class="mb-0 fw-400">
-            10
-          </h5>
-          <small class="text-muted text-uppercase ">
-            <strong>Demandas não iniciadas</strong>
-          </small>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Em andamento
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+          <ngb-progressbar [showValue]="true" type="info" [value]="50"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
         </div>
       </div>
     </div>
   </div>
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 2</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
+        </div>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Em andamento
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+          <ngb-progressbar [showValue]="true" type="info" [value]="70"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 3</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
+        </div>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Em andamento
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+          <ngb-progressbar [showValue]="true" type="info" [value]="25"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 4</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
+        </div>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Não iniciado
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+          <ngb-progressbar [showValue]="true" type="info" [value]="0"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 5</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
+        </div>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Não iniciado
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+          <ngb-progressbar [showValue]="true" type="info" [value]="0"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 6</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
+        </div>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Concluído
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+          <ngb-progressbar [showValue]="true" type="success" [value]="100"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 7</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
+        </div>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Concluído
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+            <ngb-progressbar [showValue]="true" type="success" [value]="100"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-3" (click)="openIssue()">
+    <div class="card card-body">
+      <div class="d-flex">
+        <div class="mr-auto">
+          <h3 class="mt-0 mb-0 text-uppercase">Demanda 8</h3>
+          <h6 class="mt-0 mb-0 fw-400">
+            <i>São Judas Tadeu</i>
+          </h6>
+          <p class="text-muted mt-0 mb-0">Projeto nome</p>
+        </div>
+      </div>
+      <br>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Status:</b>
+        </div>
+        <div class="col-md-8">
+          Concluído
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Progresso:</b>
+        </div>
+        <div class="col-md-8">
+          <ngb-progressbar [showValue]="true" type="success" [value]="100"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Inicio:</b>
+        </div>
+        <div class="col-md-8">
+          10/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-4">
+          <b>Data Término:</b>
+        </div>
+        <div class="col-md-8">
+          12/09/2018
+        </div>
+      </div>
+      <div class="row linha">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-link">Visualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-12 center">
+    <ngb-pagination [collectionSize]="50" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+  </div>
+</div>

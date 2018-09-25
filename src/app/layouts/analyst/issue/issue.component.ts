@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-issue',
+  templateUrl: './issue.component.html',
+  styleUrls: ['./issue.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class IssueComponent implements OnInit {
 
   public form: FormGroup;
   constructor(private fb: FormBuilder, private router: Router) {}
@@ -20,10 +20,6 @@ export class DashboardComponent implements OnInit {
 
   onSubmit() {
     this.router.navigate ( [ '/' ] );
-  }
-
-  openIssue(){
-    this.router.navigate ( [ '/analyst/issue' ] );
   }
 
 }

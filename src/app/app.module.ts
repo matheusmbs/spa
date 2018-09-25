@@ -17,6 +17,7 @@ import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/authentication/auth-layout.component';
 import { SharedModule } from './shared/shared.module';
 import { AnalystLayoutComponent } from './layouts/analyst/analyst-layout.component';
+import { AdministratorLayoutComponent } from './layouts/administrator/administrator-layout.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,7 +28,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
-    AnalystLayoutComponent
+    AnalystLayoutComponent,
+    AdministratorLayoutComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/authentication/auth-layout.component';
 import { AnalystLayoutComponent } from './layouts/analyst/analyst-layout.component';
+import { AdministratorLayoutComponent } from './layouts/administrator/administrator-layout.component';
 
 export const AppRoutes: Routes = [
   {
@@ -75,7 +76,17 @@ export const AppRoutes: Routes = [
     path: 'authentication',
     loadChildren: './layouts/authentication/authentication.module#AuthenticationModule'
   }]
-},  {
+}, 
+{
+  path: '',
+  component: AdministratorLayoutComponent,
+  children: [{
+    path: 'administrator',
+    loadChildren: './layouts/administrator/administrator.module#AdministratorModule'
+  }]
+}, 
+
+{
   path: '**',
   redirectTo: 'error/404'
 }];

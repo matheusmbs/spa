@@ -1,0 +1,169 @@
+<div class="row btn-back">
+  <div class="col-md-1">
+        <button [routerLink]="['/analyst']" class="btn btn-block btn-primary btn-sm">Voltar</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="col-md-10">
+          Demanda 1
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary ">Check-in</button>
+          <button class="btn btn-danger ">Check-out</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="row status">
+              <div class="col-md-4 col-sm-4 col-xs-12  text-center border-right">
+                <span class="box-title">
+                  <b>Tempo Estimado </b>
+                </span>
+                <br>
+                <span class="value text-success text-center "> 5 horas </span>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12  text-center border-right">
+                <span class="box-title">
+                  <b>Tempo Realizado </b>
+                </span>
+                <br>
+                <span class="value text-success text-center"> 2 horas </span>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12  text-center ">
+                <span class="box-title">
+                  <b>Status </b>
+                </span>
+                <br>
+                <span class="value text-success text-center"> Em Andamento </span>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"></agm-map>
+                </div>
+            </div>
+
+            <div class="row adicionarComentario">
+              <div class="col-md-5 col-sm-4 col-xs-12"></div>
+              <div class="col-md-5 col-sm-4 col-xs-12"></div>
+              <div class="col-md-2 col-sm-12 col-xs-12">
+                <br>
+                <button class="btn btn-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                  Adicionar Comentario
+                </button>
+                
+              </div>
+            </div>
+            <div class="row" id="collapseExample" [ngbCollapse]="!isCollapsed">
+              <div class="col-md-12 ">
+                <div class="add-coments  form-group" id="adicionarComentario">
+                  <textarea class="form-control bg-white" rows="3" placeholder=""></textarea><br>
+                  <input type="file">
+                </div>
+                <div class="form-group text-right">
+                  <button class="btn btn-primary">Enviar</button>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 20px; border-bottom: 2px solid #73879C;padding-bottom: 10px;" class="row">
+              <div class="col-md-1">
+                <img src="assets/images/avatar.jpg" width="60px" height="60px" class="avatar" alt="Avatar">
+                <br>
+
+              </div>
+              <div class="col-md-8">
+                  <h6>
+                    <b>Matheus Moura</b>
+                  </h6>
+                <span style="font-size: 17.5px; color: #73879C">Comentario sobre a tarefa realizada.</span>
+                <br>
+                <a href="#">
+                    <i class="icon icon-basic-notebook"></i> Arquivo.doc </a>
+              </div>
+              <div class="col-md-2">
+                <br>
+                <br>
+                <span style="font-size: 17.5px; color: #73879C">27 AGO</span>
+              </div>
+
+            </div>
+
+            <div style="margin-top: 20px; border-bottom: 2px solid #73879C;padding-bottom: 10px;" class="row">
+              <div class="col-md-1">
+                <img src="assets/images/avatar.jpg" width="60px" height="60px" class="avatar" alt="Avatar">
+                <br>
+
+              </div>
+              <div class="col-md-8">
+                <h6>
+                  <b>Matheus Moura</b>
+                </h6>
+                <span style="font-size: 17.5px; color: #73879C">Comentario sobre a tarefa realizada.</span>
+                <br>
+                <a href="#">
+                    <i class="icon icon-basic-notebook"></i> Arquivo.doc </a>
+              </div>
+              <div class="col-md-2">
+                <br>
+                <br>
+                <span style="font-size: 17.5px; color: #73879C">27 AGO</span>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-1 col-sm-1 col-xs-1"></div>
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <p class="title">
+              <b>Descrição</b>
+            </p>
+            <p>Descrição breve sobre a demanda</p>
+            <br>
+            <p class="title">
+              <b>Cliente</b>
+            </p>
+            <p>São Judas Tadeu</p>
+            <br>
+            <p class="title">
+              <b>Responsável pela demanda</b>
+            </p>
+            <p>Matheus Moura
+              <i data-toggle="modal" data-target="#modal-analista" style="cursor: pointer;" class="fa fa-pencil"></i>
+            </p>
+            <br>
+            <br>
+            <h5>
+              <b>Arquivos</b>
+            </h5>
+            <ul class="list-unstyled project_files">
+              <li>
+                <a href="#">
+                    <i class="icon icon-basic-notebook"></i> Documentação.docx</a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="icon icon-basic-notebook"></i> Contrato.pdf</a>
+              </li>
+              <li>
+                <a href="#">
+                    <i class="icon icon-basic-notebook"></i> Exemplo.png</a>
+              </li>
+            </ul>
+            <br>
+            <div class="text-center mtop20">
+              <a href="#" class="btn btn-sm btn-primary">Adicionar Arquivos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
